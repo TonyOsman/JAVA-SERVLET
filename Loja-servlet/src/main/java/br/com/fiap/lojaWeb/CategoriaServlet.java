@@ -33,6 +33,9 @@ public class CategoriaServlet extends HttpServlet {
 		cat1.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
 		cat1.setDescricao(request.getParameter("descricao"));
 		cat1.inserirCategoria();
+
+		//redericiona para a pagina de cadastro
+		request.getRequestDispatcher("Categoria.jsp").forward(request, response);
 		
 		doGet(request,response);
 	}
